@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --f1-rojo: #e10600;
+  --f1-negro: #15151e;
+  --f1-gris-claro: #f3f3f3;
+  --f1-blanco:  #ffffff;
+}
+
+/* Tipografía base (opcional pero recomendable) */
+body{
+  font-family: "Titillium Web", system-ui, sans-serif;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.site-nav {
+  position: sticky;   /* Mantiene el menú “pegado” en pantalla cuando haces scroll */
+  top: 0;             /* Punto a partir del cual se queda pegado: arriba del todo */
+  z-index: 1000;      /* Profundidad (capa): cuanto más alto, más por encima de otros elementos */
+  background: var(--f1-negro);
+  border-bottom: 3px solid var(--f1-rojo); /* Línea inferior de separación */
+}
+
+.nav-principal{
+  max-width: 1100px;         /* Ancho máximo del contenido del menú (no se estira infinito en pantallas grandes) */
+  margin: 0 auto;            /* Centra el contenedor horizontalmente */
+  padding: 12px 20px;        /* Espaciado interno: arriba/abajo 12px, izquierda/derecha 20px */
+  display: flex;             /* Coloca los elementos hijos en una fila (layout flexible) */
+  align-items: center;       /* Alinea verticalmente los elementos al centro */
+  justify-content: space-between; /* Separa: uno a la izquierda y otro a la derecha (máxima separación) */
+  gap: 14px;                 /* Espacio entre elementos hijos (si hay más de uno) */
+}
+
+.F1Zone{
+  display: flex;             /* Logo + texto en la misma línea */
+  align-items: center;       /* Alinea logo y texto verticalmente */
+  gap: 10px;                 /* Separación entre el logo y el texto */
+  color: var(--f1-blanco);              /* Color del texto en blanco */
+  text-decoration: none;     /* Quita el subrayado del enlace */
+  font-weight: 700;          /* Texto en negrita */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  letter-spacing: 1px;       /* Aumenta el espacio entre letras (estilo “F1”) */
+}
+
+/* =========================
+   LINKS DEL MENÚ
+========================= */
+
+/* Contenedor de links */
+.nav-links{
+  list-style: none;   /* Quita los puntos */
+  margin: 0;
+  padding: 0;
+  display: flex;      /* Links en fila */
+  align-items: center;
+  gap: 18px;
+}
+
+/* Estilo de cada link */
+.nav-links a{
+  display: block;     /* CLAVE: permite width/padding y centrado correctamente */
+  color: var(--f1-blanco);
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 10px 8px;
+  position: relative;
+}
+
+/* Subrayado rojo animado (se crea con un pseudo-elemento debajo del enlace) */
+.nav-links a::after{
+  content: "";              /* Crea el pseudo-elemento (sin texto) */
+  position: absolute;       /* Permite colocarlo con precisión dentro del <a> */
+  left: 8px;                /* Margen interno desde la izquierda */
+  right: 8px;               /* Margen interno desde la derecha (así se adapta al ancho) */
+  bottom: 6px;              /* Distancia desde la parte inferior del enlace */
+  height: 2px;              /* Grosor de la línea */
+  background: var(--f1-rojo); /* Color de la línea (variable del tema) */
+  transform: scaleX(0);     /* Inicialmente la línea está “encogida” (no se ve) */
+  transform-origin: left;   /* La animación empieza creciendo desde la izquierda */
+  transition: transform 0.18s ease; /* Animación suave del crecimiento */
+  opacity: 0.95;            /* Leve transparencia para que no sea tan “duro” */
+}
+
+/* Hover: cuando pasas el ratón por encima del enlace (LINK SUBRE UN POCO)*/
+.nav-links a:hover{
+  transform: translateY(-1px);        /* Sube 1px para dar sensación de “botón” */
+}
+
+/* Hover del pseudo-elemento: hace aparecer el subrayado (LINEA ROJA) */
+.nav-links a:hover::after{
+  transform: scaleX(1);     /* La línea se expande a su tamaño completo */
+}
+
+
+/* =========================
+   RESPONSIVE (móvil)
+========================= */
+@media (max-width: 900px){
+
+  /* El contenedor principal permite que los elementos pasen a otra línea */
+  .nav-principal{
+    flex-wrap: wrap;            /* Si no caben en una fila, saltan a la siguiente */
+    justify-content: center;    /* Centra horizontalmente el contenido dentro de la barra */
+  }
+
+  /* Logo centrado en la primera línea */
+  .F1Zone{
+    justify-content: center;    /* Centra el logo y el texto dentro del enlace */
+    width: 100%;                /* Hace que ocupe toda la fila (queda arriba solo) */
+  }
+
+  /* Menú debajo del logo y en vertical */
+  .nav-links{
+    width: 100%;                /* Ocupa toda la fila */
+    flex-direction: column;     /* Pasa de fila a columna (links uno debajo de otro) */
+    align-items: center;        /* Centra la columna de elementos */
+    gap: 10px;                  /* Separación vertical entre enlaces */
+    margin-top: 10px;           /* Espacio entre el logo y los links */
+  }
+
+  /* Cada elemento de lista ocupa el ancho completo, pero con límite */
+  .nav-links li{
+    width: 100%;                /* Se adapta al ancho disponible */
+    max-width: 320px;           /* Limita el ancho para que se vea centrado y más limpio */
+  }
+
+  /* El enlace ocupa todo el ancho del <li> y centra el texto */
+  .nav-links a{
+    width: 100%;                /* Hace que el área clicable sea grande */
+    text-align: center;         /* Centra el texto del enlace */
+    padding: 2px 2px;           /* Espaciado interno (aquí es muy pequeño) */
+  }
+
+  /* Ajuste del subrayado animado para móvil */
+  .nav-links a::after{
+    left: 12px;                 /* Margen interno izquierda del subrayado */
+    right: 12px;                /* Margen interno derecha del subrayado */
+    bottom: 1px;                /* Coloca la línea más pegada a la parte inferior */
+  }
+}
+
+/* =========================
+   LOGO F1
+========================= */
+.logo{
+  height: 30px;                /* Altura del logo (la anchura se ajusta proporcionalmente) */
+  background: var(--f1-blanco);/* Fondo blanco para que el logo destaque sobre el navbar oscuro */
+  padding: 6px;                /* Margen interno: separa el logo del borde del fondo */
+  border-radius: 4px;          /* Redondea ligeramente las esquinas del fondo */
+}
+
+/* Definimos una animación llamada "tiembla" */
+@keyframes tiembla {
+  0%   { transform: rotateZ(-1deg);}   /* Inicio: gira un poquito a la izquierda */
+  50%  {transform: rotateZ(0deg) scale(0.98); } /* Mitad: vuelve al centro y se hace ligeramente más pequeño */
+  100% {transform: rotateZ(1deg);} /* Final: gira un poquito a la derecha */
+}
+
+/* Cuando pasas el ratón por encima del logo */
+.logo:hover {
+  animation: tiembla 0.1s infinite; /* Ejecuta la animación cada 0.1s y la repite sin parar */
+}
+
+/* =========================
+   BODY Y CONTENIDO (estructura de la página)
+========================= */
+
+/* Hace que el html y el body puedan ocupar toda la altura de la ventana */
+html, body { 
+  height: 100%; 
+}
+
+body{
+  font-family: "Titillium Web", system-ui, sans-serif;
+  background: var(--f1-negro);  /* ✅ Fondo oscuro para que el texto blanco se vea */
+  color: var(--f1-blanco);      /* ✅ Color base de texto */
+}
+
+
+/* Convierte el body en un contenedor flex en columna:
+   - así podemos tener: navbar arriba, contenido en medio, footer abajo */
+body{ 
+  min-height: 200px;        /* Altura mínima del body (normalmente se usa 100vh) */
+  display: flex;            /* Activa Flexbox */
+  flex-direction: column;   /* Coloca los hijos en columna (uno debajo de otro) */
+}
+
+/* El main (.contenido) crece para ocupar todo el espacio disponible:
+   - empuja el footer hacia abajo cuando hay poco contenido */
+.contenido{ 
+  flex: 1;                  /* Ocupa el espacio libre del body */
+  display: flex;            /* Permite que su hijo (el carrusel) también se estire */
+  min-height: 0;            /* Evita problemas de desbordamiento en flex */
+}
+
+/* Carrusel ocupa todo el ancho y todo el alto disponible dentro del main */
+#f1Carousel{ 
+  width: 100%;              /* Ocupa todo el ancho */
+  flex: 1;                  /* Ocupa todo el alto disponible dentro de .contenido */
+}
+
+/* Tanto el contenedor interno como cada slide deben tener altura 100% */
+#f1Carousel .carousel-inner,
+#f1Carousel .carousel-item{ 
+  height: 100%; 
+}
+
+/* La imagen del slide:
+   - ocupa todo el ancho y alto del slide
+   - object-fit: cover recorta lo que sobra sin deformar la imagen */
+#f1Carousel .carousel-item img{ 
+  height: 100%; 
+  width: 100%; 
+  object-fit: cover; 
+}
+
+
+/* =========================
+   FOOTER 
+========================= */
+
+.pie-pagina {
+  width: 100%;
+  padding: 18px 20px;
+  color: var(--f1-blanco);
+  background: var(--f1-negro);
+  border-top: 3px solid var(--f1-rojo);
+}
+
+.pie-contenido {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pie-titulo {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.pie-descripcion {
+  margin: 6px 0 0;
+  opacity: 0.85;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.pie-copyright {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+
+@media (max-width: 700px) {
+  .pie-contenido {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
