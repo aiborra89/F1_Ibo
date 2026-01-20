@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>F1 Zone - Pilotos</title>
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/styles-parrilla.css" />
+
+
+</head>
+
+<body>
+
+  <!-- Menú de navegación -->
+  <nav class="site-nav">
+    <div class="nav-principal">
+      <a class="F1Zone" href="index.html">
+        <img class="logo" src="images/F1Logo.svg" alt="Logo F1" />
+        <span class="F1Zone-text">F1 Zone</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="circuitos.html">Circuitos</a></li>
+        <li><a class="is-active" href="pilotos.html">Pilotos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contenido -->
+  <main class="contenido contenido--pagina">
+    <section class="parrilla">
+      <h1>Parrilla de salida</h1>
+      <p class="parrilla-sub">Plantilla visual tipo F1: posición, número, bandera y equipo (con color del equipo a la izquierda).</p>
+
+      <ul class="parrilla-grid">
+
+        <!-- McLaren -->
+        <li class="parrilla-item" style="--team-color:#FF8700;">
+          <div class="parrilla-pos">P1</div>
+          <div class="parrilla-num">1</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Lando Norris</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Reino Unido">🇬🇧</span>
+              <span class="parrilla-equipo">McLaren</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="parrilla-item" style="--team-color:#FF8700;">
+          <div class="parrilla-pos">P2</div>
+          <div class="parrilla-num">81</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Oscar Piastri</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Australia">🇦🇺</span>
+              <span class="parrilla-equipo">McLaren</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- Mercedes -->
+        <li class="parrilla-item" style="--team-color:#00D2BE;">
+          <div class="parrilla-pos">P3</div>
+          <div class="parrilla-num">63</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">George Russell</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Reino Unido">🇬🇧</span>
+              <span class="parrilla-equipo">Mercedes</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="parrilla-item" style="--team-color:#00D2BE;">
+          <div class="parrilla-pos">P4</div>
+          <div class="parrilla-num">12</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Kimi Antonelli</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Italia">🇮🇹</span>
+              <span class="parrilla-equipo">Mercedes</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- Red Bull -->
+        <li class="parrilla-item" style="--team-color:#1E41FF;">
+          <div class="parrilla-pos">P5</div>
+          <div class="parrilla-num">3</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Max Verstappen</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Países Bajos">🇳🇱</span>
+              <span class="parrilla-equipo">Red Bull Racing</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="parrilla-item" style="--team-color:#1E41FF;">
+          <div class="parrilla-pos">P6</div>
+          <div class="parrilla-num">6</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Isack Hadjar</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Francia">🇫🇷</span>
+              <span class="parrilla-equipo">Red Bull Racing</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- Ferrari -->
+        <li class="parrilla-item" style="--team-color:#DC0000;">
+          <div class="parrilla-pos">P7</div>
+          <div class="parrilla-num">16</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Charles Leclerc</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Mónaco">🇲🇨</span>
+              <span class="parrilla-equipo">Ferrari</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="parrilla-item" style="--team-color:#DC0000;">
+          <div class="parrilla-pos">P8</div>
+          <div class="parrilla-num">44</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Lewis Hamilton</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Reino Unido">🇬🇧</span>
+              <span class="parrilla-equipo">Ferrari</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- Aston Martin -->
+        <li class="parrilla-item" style="--team-color:#006F62;">
+          <div class="parrilla-pos">P9</div>
+          <div class="parrilla-num">14</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Fernando Alonso</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="España">🇪🇸</span>
+              <span class="parrilla-equipo">Aston Martin</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="parrilla-item" style="--team-color:#006F62;">
+          <div class="parrilla-pos">P10</div>
+          <div class="parrilla-num">18</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Lance Stroll</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Canadá">🇨🇦</span>
+              <span class="parrilla-equipo">Aston Martin</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- Williams -->
+        <li class="parrilla-item" style="--team-color:#00A3E0;">
+          <div class="parrilla-pos">P11</div>
+          <div class="parrilla-num">23</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Alexander Albon</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Tailandia">🇹🇭</span>
+              <span class="parrilla-equipo">Williams</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="parrilla-item" style="--team-color:#00A3E0;">
+          <div class="parrilla-pos">P12</div>
+          <div class="parrilla-num">55</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Carlos Sainz</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="España">🇪🇸</span>
+              <span class="parrilla-equipo">Williams</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- Alpine -->
+        <li class="parrilla-item" style="--team-color:#FF87BC;">
+          <div class="parrilla-pos">P13</div>
+          <div class="parrilla-num">10</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Pierre Gasly</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Francia">🇫🇷</span>
+              <span class="parrilla-equipo">Alpine</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="parrilla-item" style="--team-color:#FF87BC;">
+          <div class="parrilla-pos">P14</div>
+          <div class="parrilla-num">43</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Franco Colapinto</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Argentina">🇦🇷</span>
+              <span class="parrilla-equipo">Alpine</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- Audi -->
+        <li class="parrilla-item" style="--team-color:#9A9A9A;">
+          <div class="parrilla-pos">P15</div>
+          <div class="parrilla-num">5</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Gabriel Bortoleto</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Brasil">🇧🇷</span>
+              <span class="parrilla-equipo">Audi</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="parrilla-item" style="--team-color:#9A9A9A;">
+          <div class="parrilla-pos">P16</div>
+          <div class="parrilla-num">27</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Nico Hülkenberg</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Alemania">🇩🇪</span>
+              <span class="parrilla-equipo">Audi</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- Haas -->
+        <li class="parrilla-item" style="--team-color:#E6002D;">
+          <div class="parrilla-pos">P17</div>
+          <div class="parrilla-num">31</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Esteban Ocon</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Francia">🇫🇷</span>
+              <span class="parrilla-equipo">Haas</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="parrilla-item" style="--team-color:#E6002D;">
+          <div class="parrilla-pos">P18</div>
+          <div class="parrilla-num">87</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Oliver Bearman</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Reino Unido">🇬🇧</span>
+              <span class="parrilla-equipo">Haas</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- Racing Bulls -->
+        <li class="parrilla-item" style="--team-color:#5E8BFF;">
+          <div class="parrilla-pos">P19</div>
+          <div class="parrilla-num">30</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Liam Lawson</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Nueva Zelanda">🇳🇿</span>
+              <span class="parrilla-equipo">Racing Bulls</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="parrilla-item" style="--team-color:#5E8BFF;">
+          <div class="parrilla-pos">P20</div>
+          <div class="parrilla-num">41</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Arvid Lindblad</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Reino Unido">🇬🇧</span>
+              <span class="parrilla-equipo">Racing Bulls</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- Cadillac (si quieres 20 pilotos, borra estas 2 tarjetas) -->
+        <li class="parrilla-item" style="--team-color:#C8102E;">
+          <div class="parrilla-pos">P21</div>
+          <div class="parrilla-num">11</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Sergio Pérez</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="México">🇲🇽</span>
+              <span class="parrilla-equipo">Cadillac</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="parrilla-item" style="--team-color:#C8102E;">
+          <div class="parrilla-pos">P22</div>
+          <div class="parrilla-num">77</div>
+          <div class="parrilla-datos">
+            <p class="parrilla-nombre">Valtteri Bottas</p>
+            <div class="parrilla-meta">
+              <span class="parrilla-bandera" aria-label="Finlandia">🇫🇮</span>
+              <span class="parrilla-equipo">Cadillac</span>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="pie-pagina">
+    <div class="pie-contenido">
+      <div class="pie-marca">
+        <p class="pie-titulo">F1 Zone</p>
+        <p class="pie-descripcion">Noticias, pilotos y circuitos.</p>
+      </div>
+      <div class="pie-info">
+        <p class="pie-copyright">© AIborra 2026</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>F1 Zone - Contacto</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-principal">
+
+      <a class="F1Zone" href="index.html">
+        <img class="logo" src="images/F1Logo.svg" alt="Logo F1" />
+        <span class="F1Zone-text">F1 Zone</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="circuitos.html">Circuitos</a></li>
+        <li><a href="pilotos.html">Pilotos</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <main class="contenido">
+    <section class="page" style="width:100%; max-width:900px; margin:0 auto; padding:24px 20px;">
+      <header style="margin-bottom:16px;">
+        <h1 style="color:var(--f1-blanco); margin:0;">Contacto</h1>
+        <p style="color:rgba(255,255,255,0.75); margin:6px 0 0;">
+          Escríbenos para sugerencias, dudas o colaboración.
+        </p>
+      </header>
+
+      <!-- Formulario (sin tocar tu CSS global: estilos inline suaves) -->
+      <form style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:16px;">
+        <p style="margin:0 0 12px;">
+          <label for="nombre" style="color:var(--f1-blanco); font-weight:700;">Nombre</label><br>
+          <input id="nombre" name="nombre" type="text" placeholder="Tu nombre"
+                 style="width:100%; margin-top:6px; padding:10px 12px; border-radius:10px; border:1px solid rgba(255,255,255,0.18); background:rgba(0,0,0,0.2); color:var(--f1-blanco);">
+        </p>
+
+        <p style="margin:0 0 12px;">
+          <label for="email" style="color:var(--f1-blanco); font-weight:700;">Email</label><br>
+          <input id="email" name="email" type="email" placeholder="tuemail@ejemplo.com"
+                 style="width:100%; margin-top:6px; padding:10px 12px; border-radius:10px; border:1px solid rgba(255,255,255,0.18); background:rgba(0,0,0,0.2); color:var(--f1-blanco);">
+        </p>
+
+        <p style="margin:0 0 14px;">
+          <label for="mensaje" style="color:var(--f1-blanco); font-weight:700;">Mensaje</label><br>
+          <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje..."
+                    style="width:100%; margin-top:6px; padding:10px 12px; border-radius:10px; border:1px solid rgba(255,255,255,0.18); background:rgba(0,0,0,0.2); color:var(--f1-blanco);"></textarea>
+        </p>
+
+        <button type="submit"
+                style="background:var(--f1-rojo); color:var(--f1-blanco); border:none; border-radius:12px; padding:10px 14px; font-weight:700; text-transform:uppercase; letter-spacing:0.6px; cursor:pointer;">
+          Enviar
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="pie-contenido">
+      <div class="pie-marca">
+        <p class="pie-titulo">F1 Zone</p>
+        <p class="pie-descripcion">Noticias, pilotos y circuitos.</p>
+      </div>
+      <div class="pie-info">
+        <p class="pie-copyright">© AIborra 2026</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
